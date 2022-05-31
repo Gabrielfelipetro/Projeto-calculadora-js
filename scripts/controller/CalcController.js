@@ -20,7 +20,7 @@ class CalcController {
       document.addEventListener('paste', e=>{
 
         let text = e.clipboardData.getData('Text');
-        this.displayCalc = parseFloat(text)
+        this.displayCalc = +(text)
       })
   }
 
@@ -103,7 +103,7 @@ class CalcController {
             case '7':
             case '8':
             case '9':
-                this.addOperation(parseInt(e.key));
+                this.addOperation(+(e.key));
                 break;
             case 'c':
                 if(e.ctrlKey) this.copyToClipboard();
@@ -301,7 +301,7 @@ class CalcController {
           case '7':
           case '8':
           case '9':
-              this.addOperation(parseInt(value));
+              this.addOperation(+(value));
               break;
 
           default:
