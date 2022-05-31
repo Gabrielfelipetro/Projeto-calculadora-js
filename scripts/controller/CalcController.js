@@ -1,7 +1,7 @@
 class CalcController {
 
   constructor(){
-
+      
       this._lastOperator = '';
       this._lastNumber = '';
       this._operation = [];
@@ -21,7 +21,7 @@ class CalcController {
 
       setInterval(()=>{
 
-          this.setDisplayDateTime();
+        this.setDisplayDateTime();
 
       }, 1000);
 
